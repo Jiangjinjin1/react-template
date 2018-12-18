@@ -10,6 +10,6 @@ if npm test
 then
   exit 0
 else
-  echo "error: flow or eslint failed"
+  echo "error: eslint failed"
   exit 1
 fi

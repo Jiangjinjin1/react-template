@@ -8,7 +8,8 @@
     "test": "npm run eslint",
     "eslint": "node node_modules/eslint/bin/eslint.js src",
     "fix": "node node_modules/eslint/bin/eslint.js src --fix",
-    "postinstall": "cp hooks/* .git/hooks/"
+    "postinstall": "cp hooks/* .git/hooks/",
+    "enablePrePush": "ln -s './hooks/pre-push' ./.git/hooks/pre-push"
   },
   "dependencies": {
     "react": "^16.6.3",
