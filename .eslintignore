@@ -1,3 +1,2 @@
 node_modules/*
-hooks/
 /src/serviceWorker.js

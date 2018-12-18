@@ -5,8 +5,10 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js",
-    "eslint": "node node_modules/eslint/bin/eslint.js src"
+    "test": "npm run eslint",
+    "eslint": "node node_modules/eslint/bin/eslint.js src",
+    "fix": "node node_modules/eslint/bin/eslint.js src --fix",
+    "postinstall": "cp hooks/* .git/hooks/"
   },
   "dependencies": {
     "react": "^16.6.3",
