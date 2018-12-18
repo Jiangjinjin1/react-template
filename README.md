@@ -8,6 +8,17 @@ npm run postinstall
 npm run enablePrePush
 ```
 
+## hooks也可以用三方库配置
+
+例如pre-commit和pre-push
+
+```json
+  "scripts": {
+      "lint": "……",
+  },
+  "pre-commit": ["lint"]
+```
+
 ## 如果使用vscode，再添加.editorconfig
 
 > 注意：解决项目‘LF’的问题！！！
@@ -48,9 +59,9 @@ antd组件的form表单@Form.create()等**
 
 > eslint-plugin-import  eslint-import-resolver-babel-module  两个库结合使用
 
-```javascript
+```json
 // 在.eslintrc.json中配置
-"settings": {
+  "settings": {
     "import/resolver": {
       "babel-module": {}
     }
