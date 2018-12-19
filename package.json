@@ -9,8 +9,7 @@
     "eslint": "node node_modules/eslint/bin/eslint.js src --ext .ts,.tsx",
     "fix": "node node_modules/eslint/bin/eslint.js src --ext .ts,.tsx --fix",
     "postinstall": "cp hooks/* .git/hooks/",
-    "enablePrePush": "ln -s './hooks/pre-push' ./.git/hooks/pre-push",
-    "type-check": "node node_modules/bin/tsc --noEmit"
+    "enablePrePush": "ln -s './hooks/pre-push' ./.git/hooks/pre-push"
   },
   "dependencies": {
     "react": "^16.6.3",
