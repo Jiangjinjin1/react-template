@@ -4,8 +4,8 @@ import reducers from './reducer/index'
 import { persistStore, persistReducer } from 'redux-persist'
 import storage from 'redux-persist/lib/storage'
 
-export default function(onComplete) {
-  const devEnhance = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+export default function(onComplete: (store: any, persistor: any) => void) {
+  const devEnhance = (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__()
 
   const productionEnhancer = compose(middleWare)
 

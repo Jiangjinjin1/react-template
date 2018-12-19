@@ -1,7 +1,11 @@
 {
+  "parser": "typescript-eslint-parser",
   "extends": ["react-app", "plugin:jsx-a11y/recommended"],
-  "plugins": ["jsx-a11y"],
-  "parser": "babel-eslint",
+  "plugins": ["jsx-a11y","typescript"],
+  "parserOptions": {
+    "jsx": true,
+    "useJSXTextNode": true
+  },
   "settings": {
     "import/resolver": {
       "babel-module": {}
@@ -19,6 +23,12 @@
     ],
     "no-console": 2,
     "jsx-a11y/click-events-have-key-events": 0,
-    "jsx-a11y/no-noninteractive-element-interactions": 0
+    "jsx-a11y/no-noninteractive-element-interactions": 0,
+    "typescript/class-name-casing": "off", // 类和接口的命名必须遵守帕斯卡命名法，比如 PersianCat
+    "max-len":["error", { "code": 160, "tabWidth": 4 }],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
+    "react/jsx-filename-extension": "off",
+    "typescript/no-unused-vars": "warn" // 定义的接口引入使用,但会报没有使用
   }
 }

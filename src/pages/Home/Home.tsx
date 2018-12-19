@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux'
-import {compose} from 'redux'
-import logo from '../../assets/images/logo.svg';
+import {myConnect} from '../../base/hoc/myConnect'
+import {compose, Dispatch} from 'redux'
+// import logo from '../../assets/images/logo.svg';
 import './Home.css';
 
-const homeAction = (str) => {
+const homeAction = (str: string) => {
   return () => {
     return {
       type: 'Home/test',
@@ -13,12 +13,20 @@ const homeAction = (str) => {
   }
 }
 
+interface Props{
+  homeAction: (arg1: string) => void,
+  history: any,
+}
 
-@connect(null, (dispatch) => ({
+interface State{
+
+}
+
+@myConnect(null, (dispatch: Dispatch<any>) => ({
   homeAction: compose(dispatch, homeAction)
 }))
-class App extends Component {
-  constructor(props) {
+class App extends Component<Props, State> {
+  constructor(props: Props) {
     super(props)
     this.state = {}
   }
@@ -33,7 +41,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
+          {/*<img src={logo} className="App-logo" alt="logo" />*/}
           <p onClick={this._toNextPage}>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -43,7 +51,7 @@ class App extends Component {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Learn React!!!!!!!2223
+            Learn React!!!!!!!234
           </a>
         </header>
       </div>
