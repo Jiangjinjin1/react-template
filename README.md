@@ -67,3 +67,6 @@ antd组件的form表单@Form.create()等**
     }
 }
 ```
+
+## 遇到的问题
+1、react-redux V6版本用@connect修饰器，页面组件UI没有热更舒心，我将版本降到@^5.1.1了

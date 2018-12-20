@@ -25,6 +25,15 @@ export default function(onComplete) {
 
   const persistor = persistStore(store)
 
+  if (module.hot) {
+    module.hot.accept(() => {
+      // This fetch the new state of the above reducers.
+      store.replaceReducer(
+        persistReducer(persistConfig, reducers)
+      )
+    })
+  }
+
   const onStoreInit = () => {
     if(onComplete && typeof onComplete === 'function') {
       onComplete(store,persistor)
