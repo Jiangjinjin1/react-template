@@ -1,3 +1,6 @@
+#前言
+master的分支是react+redux版，ts-master的分支是react+redux+ts
+
 ## 刚拉的项目先执行下面两个命令之一
 
 ```bash
