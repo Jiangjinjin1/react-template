@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {myConnect} from '../../base/hoc/myConnect'
 import {compose, Dispatch} from 'redux'
-// import logo from '../../assets/images/logo.svg';
+// import logo from '../../assets/images/test1.png';
 import './Home.css';
 
 const homeAction = (str: string) => {
@@ -41,7 +41,7 @@ class App extends Component<Props, State> {
     return (
       <div className="App">
         <header className="App-header">
-          {/*<img src={logo} className="App-logo" alt="logo" />*/}
+          <img src={require('../../assets/images/test1.png')} className="App-logo" alt="logo" />
           <p onClick={this._toNextPage}>
             Edit <code>src/App.js</code> and save to reload.
           </p>

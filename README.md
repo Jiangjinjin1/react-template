@@ -67,3 +67,12 @@ antd组件的form表单@Form.create()等**
     }
 }
 ```
+
+> 配置typescript + eslint会用到的库
+
++ typescript    // 将.babelrc中"presets"的"react-app"对象参数中增加typescript: true,
++ typescript-eslint-parser  // 将.eslintrc.json中parser换成typescript-eslint-parser 
++ @babel/preset-typescript  // 在.babelrc的presets里配置"@babel/typescript"
++ eslint-plugin-typescript // 在.eslintrc.json的plugins里添加"typescript"
+
+**"typescript/no-unused-vars": "warn"** 设置规则，否则引入interface会报定义未使用no-unused-vars
