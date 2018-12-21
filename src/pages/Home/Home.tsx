@@ -41,7 +41,7 @@ class App extends Component<Props, State> {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={require('../../assets/images/test1.png')} className="App-logo" alt="logo" />
+          <img src={require('../../assets/images/logo.svg')} className="App-logo" alt="logo" />
           <p onClick={this._toNextPage}>
             Edit <code>src/App.js</code> and save to reload.
           </p>
@@ -53,6 +53,7 @@ class App extends Component<Props, State> {
           >
             Learn React!!!!!!!234
           </a>
+          <h1 className="haha">哈哈哈~~~</h1>
         </header>
       </div>
     );
