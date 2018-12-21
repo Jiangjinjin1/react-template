@@ -1,0 +1,17 @@
+@custom-media --small-viewport (min-width: 200px);
+
+@media (--small-viewport) {
+    body {
+        background: yellow;
+    }
+}
+
+@custom-selector :--heading h1, h2, h3, h4, h5, h6;
+:root {
+    --red-color: red;
+    --pink-color: pink;
+}
+
+:--heading.haha{
+    color: #61dafb;
+}
