@@ -73,7 +73,7 @@ class App extends Component<P, S> {
 
 ReactDOM.render(<App />, document.getElementById('root'))
 
-
+// hot(module as any)(<App />)
 if((module as any).hot) {
   (module as any).hot.accept()
 }
